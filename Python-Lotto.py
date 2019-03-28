@@ -37,7 +37,23 @@ if answer == '1':
     trafione = set(liczby) & typy
     if trafione:
         print("\nIlość trafień: %s" % len(trafione))
+        print(" ")
         print("GRATULUJE!!! TRAFIONE LICZBY: ", trafione,)
+        if len(trafione) == 1:
+            print("TWOJA WYGRANA WYNOSI: 3$")
+        elif len(trafione) == 2:
+            print("TWOJA WYGRANA WYNOSI: 5$")
+        elif len(trafione) == 3:
+            print("TWOJA WYGRANA WYNOSI: 10$")
+        elif len(trafione) == 4:
+            print("TWOJA WYGRANA WYNOSI: 100$")
+        elif len(trafione) == 5:
+            print("TWOJA WYGRANA WYNOSI: 3500$")
+        elif len(trafione) == 6:
+            print("WOOOOW! GŁÓWNA WYGRANA!!!")
+            print("!!!!  1 000 000 $ !!!!")
+        else:
+            print(" 0 ")
     else:
         print("Przykro mi! Nie trafiłeś żadnej liczby :( Powodzenia następnym razem!")
 else:
