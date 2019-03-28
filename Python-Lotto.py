@@ -19,42 +19,39 @@ if answer == '1':
         if liczby.count(liczba) == 0:
             liczby.append(liczba)
             i = i + 1
-    print(" ")
-    print("Wytypuj", ileLiczb,"z",maksLiczba,"liczb: ")
+    print("\nPredict", ileLiczb,"from",maksLiczba,"numbers: ")
     print(" ")
     typy=set()
     i = 0
     while i < ileLiczb:
-        typ=int(input("Podaj liczbe %s: " % (i+1)))
+        typ=int(input("Give numbers %s: " % (i+1)))
         if typ not in typy:
             typy.add(typ)
             i = i+1
-            print("twoje liczby: ", typy)
+            print("Your numbers: \n", typy)
             print(" ")
-    print(" ")
-    print("Wylosowane liczby to:", liczby)
+    print("\nThe drawn numbers are:", liczby)
 
     trafione = set(liczby) & typy
     if trafione:
-        print("\nIlość trafień: %s" % len(trafione))
-        print(" ")
-        print("GRATULUJE!!! TRAFIONE LICZBY: ", trafione,)
+        print("\nNumber of hits: %s" % len(trafione))
+        print("\nCongratulations!!! Hit numbers: ", trafione,)
         if len(trafione) == 1:
-            print("TWOJA WYGRANA WYNOSI: 3$")
+            print("Your payment: 3$")
         elif len(trafione) == 2:
-            print("TWOJA WYGRANA WYNOSI: 5$")
+            print("Your payment: 5$")
         elif len(trafione) == 3:
-            print("TWOJA WYGRANA WYNOSI: 10$")
+            print("Your payment: 10$")
         elif len(trafione) == 4:
-            print("TWOJA WYGRANA WYNOSI: 100$")
+            print("Your payment: 100$")
         elif len(trafione) == 5:
-            print("TWOJA WYGRANA WYNOSI: 3500$")
+            print("Your payment: 3500$")
         elif len(trafione) == 6:
-            print("WOOOOW! GŁÓWNA WYGRANA!!!")
+            print("WOOOOW! HUUUUUUGE WIN!!!")
             print("!!!!  1 000 000 $ !!!!")
         else:
             print(" 0 ")
     else:
-        print("Przykro mi! Nie trafiłeś żadnej liczby :( Powodzenia następnym razem!")
+        print("\nSorry! You missed a number :( Good luck next time!")
 else:
     print("Ok! See you soon!  :D")
